@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useCallback } from 'react';
-import { convertQueryToJson, convertJsonToQuery } from '@/lib/utils'; // Using alias @/
+import { convertQueryToJson, convertJsonToQuery } from '@/utils/utils'; // Using alias @/
 
 const ConverterForm: React.FC = () => {
   const [queryInput, setQueryInput] = useState<string>('');
