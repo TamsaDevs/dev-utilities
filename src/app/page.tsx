@@ -1,4 +1,4 @@
-import ConverterForm from '@/components/ConverterForm'; // Import the client component
+import ConverterForm from '@/components/queryparamjson/ConverterForm'; // Import the client component
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 export default function Home() {
@@ -12,6 +12,7 @@ export default function Home() {
         </h1>
        </div>
       <ConverterForm />
+
 
       <Footer/>
     </div>
