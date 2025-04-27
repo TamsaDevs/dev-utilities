@@ -1,27 +1,28 @@
 import React from 'react'
 import { Linkedin, Twitter} from "lucide-react"
 
-
 const Footer = () => {
   return (
-    <footer className="py-3 px-6 border-t border-border/30">
-      <div className="flex items-center gap-4">
-        <a
-          href="https://linkedin.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-muted-foreground hover:text-foreground transition-colors"
-        >
-          <Linkedin className="h-4 w-4" />
-        </a>
-        <a
-          href="https://twitter.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-muted-foreground hover:text-foreground transition-colors"
-        >
-          <Twitter className="h-4 w-4" />
-        </a>
+    <footer className="fixed bottom-0 left-0 w-full py-3 px-6 border-t border-border/30 bg-background">
+      <div className="flex items-center justify-between max-w-screen-xl mx-auto gap-4">
+        <div className="flex items-center gap-4">
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-foreground transition-colors"
+          >
+            <Linkedin className="h-4 w-4" />
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-foreground transition-colors"
+          >
+            <Twitter className="h-4 w-4" />
+          </a>
+        </div>
         <span className="text-xs text-muted-foreground">© {new Date().getFullYear()} Query Param Converter</span>
       </div>
     </footer>

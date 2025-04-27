@@ -1,6 +1,44 @@
-import ConverterForm from '@/components/queryparamjson/ConverterForm';
+import { Card, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+
 export default function Home() {
+  const cardData = [
+    {
+      title: "Query Params to JSON",
+      description: "Convert URL query parameters to JSON object format.",
+      url: "/query-params-json",
+      cta: "Try it now",
+    },
+    {
+      title: "JWT Token Parser",
+      description: "Decode and parse JWT tokens easily.",
+      url: "/jwt-parser",
+      cta: "Decode JWT",
+    },
+  ];
+
   return (
-    <ConverterForm />
+    <main className="container mx-auto p-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {cardData.map((card, index) => (
+          <Card key={index} className="flex flex-col">
+            <CardHeader>
+              <CardTitle className="text-2xl">{card.title}</CardTitle>
+              <CardDescription>{card.description}</CardDescription>
+            </CardHeader>
+            <CardFooter className="mt-auto">
+              <Link href={card.url} className="w-full">
+                <Button className="w-full">
+                  {card.cta}
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </Link>
+            </CardFooter>
+          </Card>
+        ))}
+      </div>
+    </main>
   );
 }
