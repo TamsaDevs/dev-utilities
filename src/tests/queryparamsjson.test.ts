@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { convertQueryToJson, convertJsonToQuery } from './utils';
+import { convertQueryToJson, convertJsonToQuery } from '../utils/queryparamsjson/queryparamsjsonutils';
 
 describe('convertQueryToJson', () => {
   it('should parse a simple query string', () => {
