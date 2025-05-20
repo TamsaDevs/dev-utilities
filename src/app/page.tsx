@@ -17,6 +17,13 @@ export default function Home() {
       url: "/jwt-parser",
       cta: "Decode JWT",
     },
+    {
+      title: "Base64 Encoder/Decoder",
+      description: "Encode and decode Base64 strings easily.",
+      url: "/base-64-decoder",
+      cta: "Convert Base64",
+    },
+    
   ];
 
   return (
