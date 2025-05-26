@@ -9,7 +9,7 @@ export default function Home() {
       title: "Query Params to JSON",
       description: "Convert URL query parameters to JSON object format.",
       url: "/query-params-json",
-      cta: "Try it now",
+      cta: "Convert Query Params",
     },
     {
       title: "JWT Token Parser",
@@ -22,6 +22,12 @@ export default function Home() {
       description: "Encode and decode Base64 strings easily.",
       url: "/base-64-decoder",
       cta: "Convert Base64",
+    },
+    {
+      title: "JSON Formatter",
+      description: "Format and beautify your JSON data.",
+      url: "/json-formatter",
+      cta: "Format JSON",
     },
     
   ];
