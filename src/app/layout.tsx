@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     canonical: 'https://devutils.dev',
   },
   verification: {
-    google: 'your-google-verification-code',
+    google: 'OWpUMgmc_RVRO1eKN76u4MOXAuP7YuGAuehsQ-OcID4',
   },
 };
 
