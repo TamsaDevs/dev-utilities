@@ -18,15 +18,9 @@ import { cn } from "@/lib/utils"
 
 const tools = [
   {
-    title: "Base64 Encoder/Decoder",
-    href: "/base-64-decoder",
-    description: "Encode and decode Base64 strings with ease.",
-    icon: Code,
-  },
-  {
-    title: "JSON Formatter",
+    title: "JSON Formatter & Validator",
     href: "/json-formatter",
-    description: "Format, validate and beautify JSON data.",
+    description: "Format, validate and beautify JSON data instantly.",
     icon: FileText,
   },
   {
@@ -36,10 +30,22 @@ const tools = [
     icon: Key,
   },
   {
+    title: "Base64 Encoder/Decoder",
+    href: "/base-64-decoder",
+    description: "Encode and decode Base64 strings with ease.",
+    icon: Code,
+  },
+  {
     title: "Query Params to JSON",
     href: "/query-params-json",
     description: "Convert URL query parameters to JSON format.",
     icon: Search,
+  },
+  {
+    title: "JSON Compare Tool",
+    href: "/json-compare",
+    description: "Compare JSON objects and highlight differences.",
+    icon: FileText,
   },
 ]
 
@@ -64,17 +70,17 @@ const Header = () => {
             <div className="flex items-center gap-8">
               {/* Logo */}
               <Link href="/" className="flex items-center gap-2">
-                <div className="font-bold text-xl text-primary">DevTools</div>
+                <div className="font-bold text-xl text-primary">DevUtils</div>
               </Link>
 
               {/* Desktop Navigation */}
               <NavigationMenu className="hidden md:flex">
                 <NavigationMenuList>
                   <NavigationMenuItem>
-                   
-                      <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                         <Link href='/'>Home</Link>
-                      </NavigationMenuLink>
+
+                    <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                      <Link href='/'>Home</Link>
+                    </NavigationMenuLink>
                   </NavigationMenuItem>
 
                   <NavigationMenuItem>
@@ -112,9 +118,15 @@ const Header = () => {
                   </NavigationMenuItem>
 
                   <NavigationMenuItem>
-                      <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                        <Link href="/docs">Docs </Link>
-                      </NavigationMenuLink>
+                    <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                      <Link href="/about">About</Link>
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+
+                  <NavigationMenuItem>
+                    <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                      <Link href="https://github.com/TamsaDevs/dev-utilities" target="_blank" rel="noopener noreferrer">GitHub</Link>
+                    </NavigationMenuLink>
                   </NavigationMenuItem>
                 </NavigationMenuList>
               </NavigationMenu>
@@ -163,6 +175,15 @@ const Header = () => {
                     }`}
                 >
                   Home
+                </Link>
+
+                <Link
+                  href="/about"
+                  onClick={closeMobileMenu}
+                  className={`text-lg font-medium transition-colors hover:text-primary ${pathname === '/about' ? 'text-primary' : 'text-muted-foreground'
+                    }`}
+                >
+                  About
                 </Link>
 
                 <div className="text-lg font-medium text-muted-foreground mb-2">Tools</div>
